@@ -1,0 +1,16 @@
+#! /usr/bin/env php
+
+<?php
+
+use Acme\Lottery;
+use Acme\PHPMeetupNO30;
+use Symfony\Component\Console\Application;
+
+require 'vendor/autoload.php';
+
+$app = new Application('Maki10 PHP Meetup', 30);
+
+$app->add(new PHPMeetupNO30);
+$app->add(new Lottery);
+
+$app->run();
